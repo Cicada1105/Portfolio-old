@@ -1,0 +1,85 @@
+[id $= "Dots"] {
+  position:absolute;
+  width:12rem;
+  height:10rem;
+}
+[id $= "Dots"] > img {
+  position:fixed;
+  width:4rem;
+}
+[id = "topLeftDots"] {
+  margin-left:0.5%;
+  margin-top:2rem;
+  top:0%;
+  left:0%;
+}
+[id = "topLeftDots"]> [id = "corner"] {
+  transform:rotate(180deg);
+  left:0%;
+  top:0%;
+}
+[id = "topLeftDots"]> [id = "inner"] {
+  transform:rotate(180deg);
+  left:3rem;
+  top:2.5rem;
+}
+[id = "topLeftDots"]> [id = "vert"] {
+  transform:rotate(180deg);
+  left:0%;
+  top:4rem;
+}
+[id = "topLeftDots"]> [id = "hor"] {
+  left:5rem;
+  top:0%;
+}
+[id = "btmRightDots"] {
+  margin-right:0.5%;
+  margin-bottom:2rem;
+  bottom:0%;
+  right:0%;
+}
+[id = "btmRightDots"]> [id = "corner"] {
+  right:0%;
+  bottom:0%;
+}
+[id = "btmRightDots"]> [id = "inner"] {
+  right:3rem;
+  bottom:2.5rem;
+}
+[id = "btmRightDots"]> [id = "vert"] {
+  right:0%;
+  bottom:4rem;
+}
+[id = "btmRightDots"]> [id = "hor"] {
+  transform:rotate(180deg);
+  right:5rem;
+  bottom:0%;
+}
+[id ^= "building"] {
+  position:fixed;
+}
+[id = "building_1"] {
+  transform:rotate(180deg);
+  width:11rem;
+  height:11rem;
+  top:0%;
+  left:25%;
+}
+[id = "building_2"] {
+  width:11rem;
+  height:15rem;
+  top:0%;
+  right:0%;
+}
+[id = "building_3"] {
+  width:11rem;
+  height:15rem;
+  bottom:0%;
+  left:0%;
+}
+[id = "building_4"] {
+  width:11rem;
+  height:11rem;
+  bottom:0%;
+  right:25%;
+}

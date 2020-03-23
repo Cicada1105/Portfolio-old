@@ -1,0 +1,13 @@
+.blackFadeSvg {
+	position:absolute;
+  	z-index:2;
+  	width:100%;
+  	height:25%;
+  	left:0%;
+}
+#topBlackFadeSvg {
+  	top:0%;
+}
+#btmBlackFadeSvg {
+  	bottom:0%;
+}

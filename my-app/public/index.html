@@ -26,55 +26,11 @@
     <title>Portfolio</title>
 
   </head>
-  <body onload="init()">
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="bgCont">
-      <!--Top most layer of background-->
-      <div id="dots">
-        <div id="topLeftDots" class="dot_child">
-          <img src="./imgs/corner_dots.png" id="corner"/>
-          <img src="./imgs/inner_dots.png" id="inner"/>
-          <img src="./imgs/vert_side_dots.png" id="vert"/>
-          <img src="./imgs/hor_side_dots.png" id="hor"/>
-        </div>
-        <div id="btmRightDots" class="dot_child">
-          <img src="./imgs/corner_dots.png" id="corner"/>
-          <img src="./imgs/inner_dots.png" id="inner"/>
-          <img src="./imgs/vert_side_dots.png" id="vert"/>
-          <img src="./imgs/hor_side_dots.png" id="hor"/>
-        </div>
-          <img src="./imgs/city_1_dots.png" id="building_1" class="dot_child"/>
-          <img src="./imgs/city_2_dots.png" id="building_2" class="dot_child"/>
-          <img src="./imgs/city_1_dots.png" id="building_3" class="dot_child"/>
-          <img src="./imgs/city_1_dots.png" id="building_4" class="dot_child"/>
-      </div>
-      <!--Second layers of background:Black Fade-->
-      <svg class="blackFadeSvg" id="topBlackFadeSvg">
-        <defs>
-          <linearGradient id="topFade" gradientTransform="rotate(90)">
-            <stop offset="10%" stop-color="black" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="#00b8d4" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <rect id="topBlackFade" x="0" y="0" width="100%" height="100%" fill="url('#topFade')" />
-      </svg>
-      <svg class="blackFadeSvg" id="btmBlackFadeSvg">
-        <defs>
-          <linearGradient id="bottomFade" gradientTransform="rotate(90)">
-            <stop offset="10%" stop-color="#00b8d4" stop-opacity="0"/>
-            <stop offset="95%" stop-color="black" stop-opacity="0.9"/>
-          </linearGradient>
-        </defs>
-        <rect id="bottomBlackFade" x="0" y="0" width="100%" height="100%" fill="url('#bottomFade')" />
-      </svg>
-      <!--Third layer of background-->
-      <canvas id="blueFade"></canvas>
-      <!--Fourth and last layer of background-->
-      <img src="/imgs/bg.jpg" id="bgImg" alt="Blue Eddifice"/>
-    </div>
 
-    <!--Vanilla JS link-->
-    <script src="./pure-js.js"></script>
+    <!--Vanilla JS link
+    <script src="./pure-js.js"></script>-->
     <div id="root"></div>
     <!--
       This HTML file is a template.
