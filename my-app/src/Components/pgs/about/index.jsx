@@ -1,11 +1,9 @@
 import React from 'react';
 
-class About extends React.Component {
-	render() {
-		return (
-			<div>About Page</div>
-		);
-	}
+const About = () => {
+	return (
+		<div>About Page</div>
+	);
 }
 
 export { About }
