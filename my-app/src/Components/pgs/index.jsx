@@ -10,8 +10,32 @@ import ProjectRouter from './projects/router.jsx';
 import './index.css';
 
 class Navigation extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			links: [
+				{
+					name:"Josh Colvin",
+					path:"/"
+				},
+				{
+					name:"About",
+					path:"/About"
+				},
+				{
+					name:"Projects",
+					path:"/Projects"
+				},
+				{
+					name:"Contact",
+					path:"/Contact"
+				}
+			]
+		}
+	}
 	handleClick = (e) => {
-		console.log(e.target);
+		let path = e.target.nodeName === "LI" && e.target.firstElementChild.pathname;
+		console.log(path);
 	}
 	render() {
 		return(
@@ -20,18 +44,16 @@ class Navigation extends React.Component {
 					<Link to="/">Josh Colvin</Link>
 				</li>
 				<li className="divider">|</li>
-				<li>
-					<Link to="/Contact">Contact</Link>
-				</li>
-				<li className="divider">|</li>
-				<li>
-					<Link to="/Projects">Projects</Link>
-				</li>
-				<li className="divider">|</li>
-				<li>
-					<Link to="/About">About</Link>
-				</li>
-				<li className="divider">|</li>
+				{
+					this.state.links.map((link,i) => 
+						<React.Fragment key={i}>
+							<li onClick={this.handleClick} key={link.name}>
+								<Link to={link.path} onClick={(e) => e.stopPropagation()}>{link.name}</Link>
+							</li>
+							<li className="divider" key={i}>|</li>
+						</React.Fragment>
+					)
+				}
 			</ul>
 		);
 	}
