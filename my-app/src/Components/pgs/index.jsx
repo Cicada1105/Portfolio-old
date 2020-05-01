@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Redirect } from 'react-router-dom';
 
 // Routers
 import AboutRouter from './about/router.jsx';
@@ -35,7 +35,7 @@ class Navigation extends React.Component {
 	}
 	handleClick = (e) => {
 		let path = e.target.nodeName === "LI" && e.target.firstElementChild.pathname;
-		console.log(path);
+		window.location.pathname = path;
 	}
 	render() {
 		return(
