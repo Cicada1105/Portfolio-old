@@ -1,0 +1,55 @@
+ul {
+	position:fixed;
+	padding:0;
+	margin:auto;
+	width:80%;
+	height:3.45rem;
+	top:2.5rem;
+	left:10%;
+	z-index:2;
+}
+li {
+	position:relative;
+	display:inline;
+	color:white;
+	padding:1rem;
+	float:right;
+}
+li:hover {
+	background-color:#00b8d4;
+	cursor:pointer;
+}
+li:first-child {
+	float:left;
+}
+li:first-child:hover {
+	border-radius:1.75rem;
+}
+li > #initials {
+	font-family:"Asset";
+}
+li.divider {
+	padding:1rem 0rem;
+	margin:0rem 1rem;
+}
+li.divider:hover {
+	background-color:initial;
+	cursor:default;
+}
+li > a {
+	text-decoration:none;
+	color:white;
+	font-size:1.25rem;
+	z-index:1;
+}
+li > #broken_circle {
+	position:absolute;
+	width:10rem;
+	height:5rem;
+	top:-0.775rem;
+	left:-3.3rem;
+	z-index:-1;
+}
+li > #broke_circle:hover {
+	cursor:default;
+}
