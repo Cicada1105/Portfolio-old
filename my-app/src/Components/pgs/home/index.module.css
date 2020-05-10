@@ -1,0 +1,33 @@
+/*	Home CSS Module  */
+.blackCard {
+	background-color:black;
+	position:relative;
+	width:40rem;
+	height:15rem;
+	margin:15rem auto auto auto;
+	z-index:1;
+}
+.blueBorder {
+	position:relative;
+	border:2px solid #5fc0f8;
+	color:white;
+	height:110%;
+	width:35rem;
+	margin:0 auto;
+	top:-6%;
+}
+h1 {
+	font-size:2.5rem;
+	margin-top:5rem;
+}
+.arrow {
+	background-color:#043682;
+	position:relative;
+	clip-path:polygon(0% 0%, 50% 50%, 100% 0%, 100% 50%, 50% 100%, 0% 50%);
+	width:3rem;
+	height:1rem;
+	margin:auto;
+}
+.arrow:hover {
+	cursor:pointer;
+}

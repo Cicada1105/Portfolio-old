@@ -6,7 +6,7 @@ import { Home } from './index.jsx';
 const HomeRouter = () => {
 	return (
 		<Switch>
-			<Route exact path="/Home" render={() => <Home />} />
+			<Route exact path="/" render={() => <Home />} />
 		</Switch>
 	);
 }
