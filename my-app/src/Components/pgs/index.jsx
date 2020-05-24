@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+// Navigation bar
+import Navigation from './navigation/navigation.jsx';
 
 // Routers
 import AboutRouter from './about/router.jsx';
@@ -9,55 +12,6 @@ import ProjectRouter from './projects/router.jsx';
 
 import './index.css';
 
-class Navigation extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			links: [
-				{
-					name:"Josh Colvin",
-					path:"/"
-				},
-				{
-					name:"About",
-					path:"/About"
-				},
-				{
-					name:"Projects",
-					path:"/Projects"
-				},
-				{
-					name:"Contact",
-					path:"/Contact"
-				}
-			]
-		}
-	}
-	handleClick = (e) => {
-		let path = e.target.nodeName === "LI" && e.target.firstElementChild.pathname;
-		window.location.pathname = path;
-	}
-	render() {
-		return(
-			<ul>
-				<li onClick={this.handleClick}>
-					<Link to="/">Josh Colvin</Link>
-				</li>
-				<li className="divider">|</li>
-				{
-					this.state.links.map((link,i) => 
-						<React.Fragment key={i}>
-							<li onClick={this.handleClick} key={link.name}>
-								<Link to={link.path} onClick={(e) => e.stopPropagation()}>{link.name}</Link>
-							</li>
-							<li className="divider" key={i}>|</li>
-						</React.Fragment>
-					)
-				}
-			</ul>
-		);
-	}
-}
 class Page extends React.Component {
 	render() {
 		return (

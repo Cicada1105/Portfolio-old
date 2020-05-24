@@ -5,7 +5,7 @@ class BlackFade extends React.Component {
 	render() {
 		return (
       <React.Fragment>
-        <TopFade />
+        {/*<TopFade />*/}
         <BottomFade />
       </React.Fragment>
 		);

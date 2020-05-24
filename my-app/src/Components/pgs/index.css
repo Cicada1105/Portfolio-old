@@ -2,43 +2,9 @@
 	background-color:black;
 	filter:opacity(0.35);
 	position:fixed;
-	width:100%;
+	width:85%;
 	height:3.45rem;
-	top:0;
+	top:2.5rem;
+	left:7.5%;
 	z-index:1;
-}
-ul {
-	position:fixed;
-	padding:0;
-	margin:0;
-	width:100%;
-	height:3.45rem;
-	top:0;
-	z-index:2;
-}
-li {
-	position:relative;
-	display:inline;
-	color:white;
-	padding:1rem;
-	float:right;
-}
-li.divider {
-	padding:1rem 0rem;
-	margin:0rem 1rem;
-}
-li.divider:hover {
-	background-color:initial;
-	cursor:default;
-}
-li:hover {
-	background-color:#00b8d4;
-}
-li:first-child {
-	float:left;
-}
-li > a {
-	text-decoration:none;
-	color:white;
-	font-size:1.25rem;
 }

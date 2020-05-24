@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Styles
-import style from './index.module.css';
+import styles from './index.module.css';
 
 const Home = () => {
 	return (
@@ -12,32 +12,47 @@ const Home = () => {
 }
 
 class IntroCard extends React.Component {
+	constructor() {
+		super();
+
+		this.myRef = React.createRef();
+	}
+	handleArrowClick = (clicked) => {
+		console.log("Arrow Click");
+	}
 	render() {
 		return(
-			<div className={ style.blackCard }>
-				<div className={ style.blueBorder }>
+			<div className={ styles.blackCard } ref={this.myRef}>
+				<div className={ styles.blueBorder }>
 					<h1>
 						Hi, I'm Josh Colvin
 					</h1>
 					<h4>
 						Web Developer
 					</h4>
-					<Arrow />
+					<Arrow handleClick={ this.handleArrowClick } />
 				</div>
 			</div>
 		);
 	}
 }
 
-const Arrow = () => {
+const Arrow = (props) => {
 	const [clicked, setClick] = useState(false);
 
+	let initialLoad = useRef(true);
+
 	useEffect(() => {
-		console.log(`Clicked? ${clicked}`);
+		if (initialLoad.current) {
+			initialLoad.current = false;
+			return;
+		}
+		else
+			props.handleClick(clicked);
 	});
 
 	return (
-		<div className={ style.arrow } onClick={() => setClick(!clicked)}>
+		<div className={ styles.arrow } onClick={() => setClick(!clicked)}>
 		</div>
 	);
 }

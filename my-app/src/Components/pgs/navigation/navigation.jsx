@@ -13,10 +13,6 @@ class Navigation extends React.Component {
 		this.state = {
 			links: [
 				{
-					name:"Josh Colvin",
-					path:"/"
-				},
-				{
 					name:"About",
 					path:"/About"
 				},

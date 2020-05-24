@@ -50,6 +50,6 @@ li > #broken_circle {
 	left:-3.3rem;
 	z-index:-1;
 }
-li > #broke_circle:hover {
+li > #broken_circle:hover {
 	cursor:default;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import image from './bg.jpg';
+import image from './imgs/light_trails.png';
 import './index.css';
 
 class BackgroundImage extends React.Component {
