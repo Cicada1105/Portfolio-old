@@ -5,7 +5,7 @@ import './index.css';
 class BackgroundImage extends React.Component {
 	render() {
 		return (
-			<img src={ image } id="bgImg" alt="Blue Fade" />
+			<img src={ image } className="bgImg" alt="Blue Fade" />
 		);
 	}
 }

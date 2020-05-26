@@ -1,3 +1,17 @@
+.navBar {
+	position:fixed;
+	width:85%;
+	height:3.45rem;
+	top:2.5rem;
+	left:7.5%;
+	z-index:2;
+}
+.navBarBg {
+	background-color:black;
+	filter:opacity(0.35);
+	width:100%;
+	height:100%;
+}
 ul {
 	position:fixed;
 	padding:0;

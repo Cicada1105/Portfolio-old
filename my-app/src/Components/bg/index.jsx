@@ -1,6 +1,6 @@
 import React from 'react';
 import { BackgroundImage } from './bg_image/index.jsx';
-import { BlackFade } from './black_fade/index.jsx';
+import { BlueFadeBlack } from './blue_fade_black/index.jsx';
 
 import './index.css';
 
@@ -9,7 +9,10 @@ class Background extends React.Component {
 		return (
 			<div className="bgFragment">
 				<BackgroundImage />
-				<BlackFade />
+				<BackgroundImage />
+				<BackgroundImage />
+				<BackgroundImage />
+				<BlueFadeBlack />
 			</div>
 		)
 	}

@@ -1,13 +1,10 @@
 import React from 'react';
 import './index.css';
 
-class BlackFade extends React.Component {
+class BlueFadeBlack extends React.Component {
 	render() {
 		return (
-      <React.Fragment>
-        {/*<TopFade />*/}
-        <BottomFade />
-      </React.Fragment>
+      <BottomFade />
 		);
 	}
 }
@@ -31,57 +28,12 @@ class Fade extends React.Component {
   }
 }
 
-class TopFade extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      svg: {
-        class:"blackFadeSvg",
-        id:"topBlackFadeSvg",
-        defs: {
-          linearGradient: {
-            id:"topFade",
-            gradient:"rotate(90)",
-            stop: [
-              {
-                offset:"10%",
-                color:"black",
-                opacity:"0.9"
-              },
-              {
-                offset:"100%",
-                color:"#00b8d4",
-                opacity:"0"
-              }
-            ]
-          },
-        },
-        rect: {
-          id:"topBlackFade",
-          x:"0",
-          y:"0",
-          width:"100%",
-          height:"100%",
-          fill:"url('#topFade')"
-        }
-      }
-    }
-  }
-
-  render() {
-    return (
-      <Fade svg={ this.state.svg } />
-    )
-  }
-}
-
 class BottomFade extends React.Component {
   constructor() {
     super();
     this.state = {
       svg: {
-        class:"blackFadeSvg",
+        class:"blueBlackFadeSvg",
         id:"btmBlackFadeSvg",
         defs: {
           linearGradient: {
@@ -89,20 +41,20 @@ class BottomFade extends React.Component {
             gradient:"rotate(90)",
             stop: [
               {
-                offset:"10%",
-                color:"#00b8d4",
-                opacity:"0"
+                offset:"0%",
+                color:"#000e2c",
+                opacity:"0.9"
               },
               {
                 offset:"95%",
-                color:"black",
-                opacity:"0.9"
+                color:"#000000",
+                opacity:"1"
               }
             ]
           }
         },
         rect: {
-          id:"bottomBlackFade",
+          id:"bottomBlueBlackFade",
           x:"0",
           y:"0",
           width:"100%",
@@ -118,4 +70,5 @@ class BottomFade extends React.Component {
     );
   }
 };
-export { BlackFade };
+
+export { BlueFadeBlack };

@@ -78,23 +78,27 @@ class Navigation extends React.Component {
 	}
 	render() {
 		return(
-			<ul>
-				<li onClick={this.handleClick}>
-					<canvas id="broken_circle" ref={this.myRef}/>
-					<Link to="/" id="initials" onClick={(e) => e.stopPropagation()}>JC</Link>
-				</li>
-				<li className="divider">|</li>
-				{
-					this.state.links.map((link,i) => 
-						<React.Fragment key={i}>
-							<li onClick={this.handleClick} key={link.name}>
-								<Link to={link.path} onClick={(e) => e.stopPropagation()}>{link.name}</Link>
-							</li>
-							<li className="divider" key={i}>|</li>
-						</React.Fragment>
-					)
-				}
-			</ul>
+			<div className="navBar">
+				{/*		Block container to have transparency without affecting navigation bar 	*/}
+				<div className="navBarBg"></div>	
+				<ul>
+					<li onClick={this.handleClick}>
+						<canvas id="broken_circle" ref={this.myRef}/>
+						<Link to="/" id="initials" onClick={(e) => e.stopPropagation()}>JC</Link>
+					</li>
+					<li className="divider">|</li>
+					{
+						this.state.links.map((link,i) => 
+							<React.Fragment key={i}>
+								<li onClick={this.handleClick} key={link.name}>
+									<Link to={link.path} onClick={(e) => e.stopPropagation()}>{link.name}</Link>
+								</li>
+								<li className="divider" key={i}>|</li>
+							</React.Fragment>
+						)
+					}
+				</ul>
+			</div>
 		);
 	}
 }
