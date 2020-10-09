@@ -1,0 +1,12 @@
+.section {
+	background-color: cyan;
+	position:sticky;
+	display:inline-block;
+	color:white;
+	margin-top:8rem;
+	margin-bottom:calc(100vh - 43rem);
+	width:90vw;
+	height:35rem;
+	top:8rem;
+	z-index:1;
+}

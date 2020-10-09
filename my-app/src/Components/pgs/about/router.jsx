@@ -4,10 +4,12 @@ import { Switch, Route } from 'react-router-dom';
 import { About } from './index.jsx';
 
 const AboutRouter = () => {
-
 	return (
 		<Switch>
-			<Route exact path="/About" render={() => <About /> } />
+			<Route path="/About" render={({location}) => {
+				console.log("About Router");
+				return location.state && <About />
+			}} />
 		</Switch>
 	);
 }

@@ -7,7 +7,10 @@ import { Contact } from './index.jsx'
 const ContactRouter = () => {
 	return(
 		<Switch>
-			<Route path="/Contact" render={() => <Contact /> } />
+			<Route path="/Contact" render={({location}) => {
+				console.log("Contact router");
+				return location.state && <Contact />
+			}} />
 		</Switch>
 	);
 }

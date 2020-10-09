@@ -1,6 +1,7 @@
 .App {
-	position:static;
+	position:absolute;
   	text-align: center;
+  	font-size:16px;
 	width:100%;
 	height:inherit;
 	top:0%;

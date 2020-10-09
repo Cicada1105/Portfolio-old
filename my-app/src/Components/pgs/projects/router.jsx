@@ -7,7 +7,10 @@ import { Projects } from './index.jsx';
 const ProjectRouter = () => {
 	return (
 		<Switch>
-			<Route path="/Projects" render={() => <Projects />} />
+			<Route path="/Projects" render={({location}) => {
+				console.log("Projects Router");
+				return location.state && <Projects />
+			}} />
 		</Switch>
 	);
 }

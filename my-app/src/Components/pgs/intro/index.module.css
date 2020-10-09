@@ -4,7 +4,7 @@
 	position:relative;
 	width:40rem;
 	height:15rem;
-	margin:15rem auto auto auto;
+	margin:15rem auto calc(100vh - 30rem) auto;
 	z-index:1;
 }
 .blueBorder {
