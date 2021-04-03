@@ -1,0 +1,11 @@
+/*Remove scroll bar from Chrome, Safari and Opera*/
+.contactSection::-webkit-scrollbar {
+	display:none;
+}
+.contactSection {
+	/*Remove scroll bar from IE, Edge and Firefox*/
+	-ms-overflow-style:none; /*IE and Edge*/
+	scrollbar-width:none; /*Firefox*/
+	overflow-y:scroll;
+	height:25rem;
+}

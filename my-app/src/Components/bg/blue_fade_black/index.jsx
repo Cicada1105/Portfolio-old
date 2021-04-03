@@ -4,7 +4,11 @@ import './index.css';
 class BlueFadeBlack extends React.Component {
 	render() {
 		return (
-      <BottomFade />
+      <React.Fragment>
+        <BottomFade svgID="btmBlackFadeSvg_1" gradientID="bottomFade_1" from="#021131" to="#010d31"/>
+        <BottomFade svgID="btmBlackFadeSvg_2" gradientID="bottomFade_2" from="#010d31" to="#010a24" />
+        <BottomFade svgID="btmBlackFadeSvg_3" gradientID="bottomFade_3" from="#010a24" to="#010617" />
+      </React.Fragment>
 		);
 	}
 }
@@ -29,25 +33,26 @@ class Fade extends React.Component {
 }
 
 class BottomFade extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
       svg: {
         class:"blueBlackFadeSvg",
-        id:"btmBlackFadeSvg",
+        id:props.svgID,
         defs: {
           linearGradient: {
-            id:"bottomFade",
+            id:props.gradientID,
             gradient:"rotate(90)",
             stop: [
               {
                 offset:"0%",
-                color:"#000e2c",
+                color:props.from,
                 opacity:"0.9"
               },
               {
                 offset:"95%",
-                color:"#000000",
+                color:props.to,
                 opacity:"1"
               }
             ]
@@ -59,7 +64,7 @@ class BottomFade extends React.Component {
           y:"0",
           width:"100%",
           height:"100%",
-          fill:"url('#bottomFade')"
+          fill:"url(#" + props.gradientID + ")"
         }
       }
     }

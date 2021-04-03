@@ -1,12 +1,41 @@
+h2 {
+	margin:0;
+}
+.headerUnderline {
+	display:block;
+	filter:hue-rotate(60deg) saturate(20);
+	margin:auto;
+	left:6px;
+	top:28px;
+	width:15rem;
+	z-index: 2;
+}
+section {
+	position:sticky;
+	font-size:1.1rem;
+	height:25rem;
+}
+/*Remove scroll bar for Chrome, Safari and Opera*/
+.section::-webkit-scrollbar {
+	display:none;
+}
 .section {
-	background-color: cyan;
+	/*Remove scroll bar for IE, Edge and Firefox*/
+	-ms-overflow-style:none; /* IE and Edge */
+	scrollbar-width:none; /* Firefox */
+	box-shadow: 0px -40px 25px -34px cyan inset;
 	position:sticky;
 	display:inline-block;
 	color:white;
-	margin-top:8rem;
+	margin-top:10rem;
 	margin-bottom:calc(100vh - 43rem);
-	width:90vw;
-	height:35rem;
+	width:80vw;
 	top:8rem;
 	z-index:1;
+}
+.section:nth-of-type(6)::after {
+	content:"";
+	display:inline-block;
+	position: relative;
+	height:35rem;
 }

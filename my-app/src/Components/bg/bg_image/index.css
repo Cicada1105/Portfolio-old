@@ -6,6 +6,9 @@
   	width:50%;
   	height:100vh;
 }
+.bgImg:nth-child(even) {
+  margin-left:-1px;
+}
 .bgImg:nth-child(1) {
 	transform:rotateY(180deg);
 }

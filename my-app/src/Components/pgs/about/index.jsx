@@ -2,8 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { useLocation, useRouteMatch } from 'react-router-dom';
 
 // Styles
-import './style.css';
+import localStyles from './style.module.css';
 import globalStyles from '../global.module.css'
+import underline from '../resources/imgs/heading_underline.png';
 
 const About = (props) => {
 	const location = useLocation();
@@ -17,11 +18,14 @@ const About = (props) => {
 					behavior: "smooth"
 				});
 	});
-
+	const styles = {
+		height:"25rem"
+	}
 	return (
-		<div ref={aboutRef} className={ globalStyles.section } id="about">
-			<h2>About</h2>
-			<section>
+		<div ref={aboutRef} className={ globalStyles.section } id="about" style={styles}>
+			<h2 className={ localStyles.aboutHeader }>About</h2>
+			<img src={ underline } alt="underline" className={ globalStyles.headerUnderline } />
+			<section className={ localStyles.aboutSection }>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel lacus nec magna gravida pellentesque 
 					in sed ligula. Nullam tincidunt lectus ac arcu laoreet elementum. Mauris tempus accumsan odio eu euismod. 

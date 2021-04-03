@@ -1,0 +1,7 @@
+.projects_header_cont {
+	background-color:#020e2e;
+	position: sticky;
+	display: block;
+	top:0px;
+	z-index: 1;
+}

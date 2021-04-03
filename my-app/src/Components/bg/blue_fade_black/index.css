@@ -1,4 +1,4 @@
-.blueBlackFadeSvg {
+[class ^= "blueBlackFadeSvg"] {
 	position:relative;
 	display:block;
   	z-index:0;

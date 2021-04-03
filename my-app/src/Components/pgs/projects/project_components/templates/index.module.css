@@ -1,0 +1,88 @@
+.websiteProjectCard, .codeProjectCard {
+	background-color:black;
+	position: relative;
+	opacity: 0.75;
+	margin:15px 25px;
+	width:22rem;
+	height:25rem;
+}
+.websiteProjectCard > h3, .codeProjectCard > h3 {
+	font-family:serif;
+	letter-spacing: 1px;
+	margin:1.15rem auto;
+	width:90%;
+}
+.languagesImgCard::-webkit-scrollbar {
+	display: none;
+}
+.languagesImgCard {
+	display: flex;
+	margin-bottom: 2rem;
+	-ms-overflow-style:none;
+	scrollbar-width:none;
+	flex-flow:row wrap;
+	justify-content: space-around;
+	/*align-content: space-around;*/
+	overflow-y:scroll;
+	height:8rem;
+}
+.languagesImgCard > .imgCont {
+	width:50%;
+}
+.imgCont > img {
+	height:2.75rem;
+	margin:7% 18%;
+}
+.imgCont > img[alt = "Java"] {
+	height:3.5rem;
+}
+.imgCont > img:hover {
+	cursor:pointer;
+}
+.projectDescription {
+	padding:0px 15px;
+	height:22%;
+	overflow-y: scroll;
+}
+/*Used in Chrome, Safari and Opera*/
+.projectDescription::-webkit-scrollbar {
+	display:none;
+}
+.projectCardBtn {
+	background:linear-gradient(45deg,#072f78, black);
+	border:2px solid #072f78;
+	position: absolute;
+	width:fit-content;
+	padding:10px 14px;
+	border-radius:8px;
+	bottom:30px;
+	/*Remove scrollbar for IE, Edge and Firefox*/
+	-ms-overflow-style:none; /*IE and Edge*/
+	scrollbar-width:none; /*Firefox*/
+}
+.projectCardBtn:hover {
+	cursor:pointer;
+}
+.websiteProjectCard > .projectCardBtn:nth-of-type(2) {
+	left:5%;
+}
+.websiteProjectCard > .projectCardBtn:nth-of-type(3) {
+	right:5%;
+}
+.codeProjectCard > .projectCardBtn {
+	transform:translateX(-50%);
+	left:50%;
+}
+.projectCardBtn > span {
+	vertical-align: middle;
+	padding-right:7px;
+}
+.projectCardBtn > img {
+	filter:invert(1);
+	display:block;
+	float:right;
+	width:25px;
+}
+.websiteProjectCard > .projectCardBtn:nth-of-type(2) > img {
+	filter:unset;
+}
