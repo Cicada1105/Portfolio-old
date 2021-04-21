@@ -24,18 +24,18 @@ section {
 	-ms-overflow-style:none; /* IE and Edge */
 	scrollbar-width:none; /* Firefox */
 	box-shadow: 0px -40px 25px -34px cyan inset;
-	position:sticky;
+	/*position:sticky;*/
+	position: relative;
 	display:inline-block;
 	color:white;
 	margin-top:10rem;
-	margin-bottom:calc(100vh - 43rem);
 	width:80vw;
-	top:8rem;
+	/*top:8rem;*/
 	z-index:1;
 }
-.section:nth-of-type(6)::after {
+/*.section:nth-of-type(6)::after {
 	content:"";
 	display:inline-block;
 	position: relative;
 	height:35rem;
-}
+}*/
