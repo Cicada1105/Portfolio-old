@@ -62,7 +62,8 @@ const Projects = () => {
 	let styles = {
 		overflowY:"scroll",
 		height:"35.5rem",
-		marginBottom: "calc(100vh - 45.5rem)"
+		marginTop:"7rem",
+		marginBottom: "calc(100vh - 42.5rem)"
 	}
 	return (
 		<div ref={ projectsRef } className={ globalStyles.section } id="projects" style={styles}>

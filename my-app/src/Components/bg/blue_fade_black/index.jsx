@@ -7,7 +7,6 @@ class BlueFadeBlack extends React.Component {
       <React.Fragment>
         <BottomFade svgID="btmBlackFadeSvg_1" gradientID="bottomFade_1" from="#021131" to="#010d31"/>
         <BottomFade svgID="btmBlackFadeSvg_2" gradientID="bottomFade_2" from="#010d31" to="#010a24" />
-        <BottomFade svgID="btmBlackFadeSvg_3" gradientID="bottomFade_3" from="#010a24" to="#010617" />
       </React.Fragment>
 		);
 	}

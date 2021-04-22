@@ -70,6 +70,7 @@ const About = (props) => {
 
 	const styles = {
 		height:"25rem",
+		marginTop:"10rem",
 		marginBottom: "calc(100vh - 35rem)"
 	}
 	return (

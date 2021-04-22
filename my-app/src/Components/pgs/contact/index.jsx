@@ -58,7 +58,8 @@ const Contact = () => {
 
 	let styles = {
 		height:"29.15rem",
-		marginBottom: "calc(100vh - 39.15rem)"
+		marginTop:"7rem",
+		marginBottom: "calc(100vh - 36.15rem)"
 	}
 	return (
 		<div ref={ contactRef } className={ globalStyles.section } id="contact" style={ styles }>

@@ -29,14 +29,15 @@ const App = function() {
 		if (aboveAbout || betweenAboutAndProjects || betweenProjectsAndContact) {
 			console.log("Outisde of components");
 			// Remove current listener 
-			pageRef.current.removeEventListener("scroll",exitThresholdListenerRef.current,true);
+			pageRef.current.removeEventListener("wheel",exitThresholdListenerRef.current,true);
 			// Add listener to check if user has scrolled within individual components thresholds
-			pageRef.current.addEventListener("scroll",listenerRef.current,{ capture: true });
+			pageRef.current.addEventListener("wheel",listenerRef.current,{ capture: true });
 		}
 
 	})
 	let listenerRef = useRef(() => {
 		let currYPos = pageRef.current.scrollTop;
+		console.log(currYPos);
 		console.log("Checking if scroll position is within component thresholds");
 		/* 
 			Check if state was just dispatched from another component
@@ -78,7 +79,7 @@ const App = function() {
 			console.log("Normal page scroll");
 			// Check if listener has already been added
 			if (!hasListenerRef.current) {
-				pageRef.current.addEventListener("scroll",exitThresholdListenerRef.current,true);
+				pageRef.current.addEventListener("wheel",exitThresholdListenerRef.current,true);
 				hasListenerRef.current = true;	
 			}
 
@@ -88,7 +89,7 @@ const App = function() {
 			console.log("Remove page scroll");
 			// Only need to remove listener if added. Don't need to attempt to remove every time
 			if (hasListenerRef.current) {
-				pageRef.current.removeEventListener("scroll",listenerRef.current,{ capture: true });	
+				pageRef.current.removeEventListener("wheel",listenerRef.current,{ capture: true });	
 				hasListenerRef.current = false;
 			}
 

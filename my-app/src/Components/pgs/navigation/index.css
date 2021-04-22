@@ -50,7 +50,13 @@ li.divider:hover {
 	background-color:initial;
 	cursor:default;
 }
-li > a {
+/*li > a {
+	text-decoration:none;
+	color:white;
+	font-size:1.25rem;
+	z-index:1;
+}*/
+li > span {
 	text-decoration:none;
 	color:white;
 	font-size:1.25rem;
