@@ -28,9 +28,13 @@ section {
 	position: relative;
 	display:inline-block;
 	color:white;
-	width:80vw;
+	width:66vw;
 	/*top:8rem;*/
 	z-index:1;
+}
+.section p {
+	font-size:1.2rem;
+	line-height: 26px;
 }
 /*.section:nth-of-type(6)::after {
 	content:"";

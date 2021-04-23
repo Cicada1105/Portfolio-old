@@ -21,7 +21,6 @@ const About = (props) => {
 		let bottomThreshold = aboutScrollRef.current.scrollHeight - aboutScrollRef.current.offsetHeight;
 
 		if ((scrollTop === 0) || (scrollTop === bottomThreshold)) {
-			console.log("Dispatching from about, back to normal");
 			aboutScrollRef.current.style.overflowY = "hidden";
 			// Return page scroll back to normal
 			dispatch({ type: "normal" });
@@ -42,10 +41,7 @@ const About = (props) => {
 			context is on about section and listener has not
 			been added previously
 		*/
-		console.log("%c-------------------------","color:aqua;");
-		console.log("%cAbout section info:","font-weight:bold");
 		if (state.section === "about") {
-			console.log("About section scroll");
 			// Check if listener has already been added
 			if (!hasListenerRef.current) {
 				aboutScrollRef.current.addEventListener("scroll",listenerRef.current,{ capture: true });
@@ -55,7 +51,6 @@ const About = (props) => {
 			aboutScrollRef.current.style.overflowY = "scroll";
 		}
 		else {
-			console.log("Remove about section scroll");
 			// Only need to remove listener if added. Don't need to attempt to remove every time
 			if (hasListenerRef.current) {
 				aboutScrollRef.current.removeEventListener("scroll",listenerRef.current, { capture: true });	
@@ -64,8 +59,6 @@ const About = (props) => {
 
 			aboutScrollRef.current.style.overflowY = "hidden";
 		}
-		console.log(`State: ${state.section}`);
-		console.log(`hasListener: ${hasListenerRef.current}`);
  	},[state, dispatch]);
 
 	const styles = {
@@ -79,34 +72,39 @@ const About = (props) => {
 			<img src={ underline } alt="underline" className={ globalStyles.headerUnderline } />
 			<section ref={aboutScrollRef} className={ localStyles.aboutSection }>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel lacus nec magna gravida pellentesque 
-					in sed ligula. Nullam tincidunt lectus ac arcu laoreet elementum. Mauris tempus accumsan odio eu euismod. 
-					Vivamus lorem ligula, porta eu lobortis mollis, euismod in nulla. Maecenas convallis lectus tellus, sed 
-					suscipit diam sollicitudin id. Maecenas iaculis pellentesque leo, id imperdiet enim vehicula et. Maecenas 
-					sed velit ut elit dapibus dignissim. Nam finibus lacinia magna ac gravida. Nulla non convallis leo. Nunc 
-					non rutrum felis, ac accumsan nibh. Nullam aliquam mi et dignissim porta. Suspendisse efficitur purus ex, 
-					a consequat lectus rhoncus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
-					cubilia curae; Sed sodales metus eu mi viverra, ac maximus enim tristique. In hac habitasse platea dictumst.
+					{/*
+						Intro
+							- Coding history 
+								- Classes?
+								- Self taught 
+					*/}
+					I am a front end web developer who focuses primarily on JavaScript and ReactJS development. I
+					enjoy bringing UI to life through a sustainable and modularized code base. From my beginnings
+					in junior year of highschool, to my years in college, I have obtained over 4 years of self taught
+					web development. Studying, practicing and error handling of various languages, including
+					ReactJS, Typescript, NodeJS and others, has helped me acquire flexibility in my coding skills.
 				</p>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel lacus nec magna gravida pellentesque 
-					in sed ligula. Nullam tincidunt lectus ac arcu laoreet elementum. Mauris tempus accumsan odio eu euismod. 
-					Vivamus lorem ligula, porta eu lobortis mollis, euismod in nulla. Maecenas convallis lectus tellus, sed 
-					suscipit diam sollicitudin id. Maecenas iaculis pellentesque leo, id imperdiet enim vehicula et. Maecenas 
-					sed velit ut elit dapibus dignissim. Nam finibus lacinia magna ac gravida. Nulla non convallis leo. Nunc 
-					non rutrum felis, ac accumsan nibh. Nullam aliquam mi et dignissim porta. Suspendisse efficitur purus ex, 
-					a consequat lectus rhoncus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
-					cubilia curae; Sed sodales metus eu mi viverra, ac maximus enim tristique. In hac habitasse platea dictumst.
+					{/*
+						Present
+							- What I bring (coding and self discipline)
+							- Approach
+					*/}
+					Because of my self teaching, I have learned to quickly adjust to any challenge or language thrown 
+					my way. Languages/Libraries/Frameworks I have learned and done projects on include ReactJS, 
+					Typescript, NodeJS, ReactJS, DJango, LESS, Pug and PHP. I believe that code planning, solid 
+					infrastructure and reusability are important components in making solid and maintainable software. 
+					Every project I work on, I approach with the same meticulous planning of infrastructure, code 
+					design and resuability that is needed to account for scalability and maintainability.
 				</p>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel lacus nec magna gravida pellentesque 
-					in sed ligula. Nullam tincidunt lectus ac arcu laoreet elementum. Mauris tempus accumsan odio eu euismod. 
-					Vivamus lorem ligula, porta eu lobortis mollis, euismod in nulla. Maecenas convallis lectus tellus, sed 
-					suscipit diam sollicitudin id. Maecenas iaculis pellentesque leo, id imperdiet enim vehicula et. Maecenas 
-					sed velit ut elit dapibus dignissim. Nam finibus lacinia magna ac gravida. Nulla non convallis leo. Nunc 
-					non rutrum felis, ac accumsan nibh. Nullam aliquam mi et dignissim porta. Suspendisse efficitur purus ex, 
-					a consequat lectus rhoncus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
-					cubilia curae; Sed sodales metus eu mi viverra, ac maximus enim tristique. In hac habitasse platea dictumst.
+					{/*
+						Future/ Direct to contact
+							- How I plan on growing and maintain skills
+					*/}
+					A constant drive for learning, testing, making mistakes and bettering myself allows me to advance 
+					through whatever I approach. If you have any questions about me, my previous work or even future 
+					work, check out my contact section below for more details. 
 				</p>
 			</section>
 		</div>
