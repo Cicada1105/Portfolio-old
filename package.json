@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "My Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,7 +32,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "This project is a central hub for displaying my professional and personal projects",
   "main": "index.jsx",
   "author": "",
   "license": "ISC"

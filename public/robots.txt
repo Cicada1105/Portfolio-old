@@ -1,2 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
+
+# All agents have access to entire project denoted by '/'
 User-agent: *
+Allow: /

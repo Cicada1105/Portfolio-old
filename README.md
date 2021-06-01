@@ -48,4 +48,4 @@ npm start
 
 [website]: https://josh-colvin-portfolio.herokuapp.com/
 [NodeJS]:https://nodejs.org/en/
-[github]: https://github.com/Cicada1105?tab=repositories\
+[github]: https://github.com/Cicada1105?tab=repositories

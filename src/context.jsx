@@ -7,7 +7,6 @@ import React from 'react';
 const PageScrollContext = React.createContext(null);
 
 function reducer(state,action) {
-	console.log(state);
 	switch(action.type) {
 		case "about_section":
 			return { section: "about" }
