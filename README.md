@@ -24,18 +24,18 @@ npm start
 #### Files & Directories
 ---
 - node_modules/
- - Contains necessary ReactJS dependencies to run project
+    - Contains necessary ReactJS dependencies to run project
 - public/
- - Contains html file that includes compiled JS script provided by running React project, manifest.json for meta data and robots.txt.
+    - Contains html file that includes compiled JS script provided by running React project, manifest.json for meta data and robots.txt.
 - src/
- - ./Component/
-   - ./bg/
-     - Files for displaying static background
-   - ./pgs/
+    - ./Component/
+        - ./bg/
+             - Files for displaying static background
+        - ./pgs/
      - Filess for defining section/page components
- - ./index.jsx
-   - Initializes application, handles global context and user interaction, and renders it to DOM
- - ./context.jsx
+    - ./index.jsx
+	    - Initializes application, handles global context and user interaction, and renders it to DOM
+	- ./context.jsx
    - Global context and reducer definition 
 
 #### Design Notes
